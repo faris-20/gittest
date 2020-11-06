@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+<robot name="butler" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+<transmission name="Rev52_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Rev52">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Rev52_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="Rev54_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Rev54">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Rev54_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="Rev56_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Rev56">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Rev56_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+</robot>

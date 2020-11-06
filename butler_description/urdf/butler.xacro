@@ -1,0 +1,1435 @@
+<?xml version="1.0" ?>
+<robot name="butler" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find butler_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find butler_description)/urdf/butler.trans" />
+<xacro:include filename="$(find butler_description)/urdf/butler.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.00522601417957124 0.0031954826968695117 0.20699123641725392"/>
+    <mass value="5.921009708330421"/>
+    <inertia ixx="0.232823" ixy="-5e-06" ixz="0.0" iyy="0.267652" iyz="-0.0" izz="0.500435"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="extrusion_black_short_1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.012500290617520282 4.515547901706718e-07 0.06651773641725925"/>
+    <mass value="0.06588100115579627"/>
+    <inertia ixx="0.000102" ixy="0.0" ixz="0.0" iyy="0.000114" iyz="0.0" izz="2.1e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.317758 -0.297776 -0.210166"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/extrusion_black_short_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.317758 -0.297776 -0.210166"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/extrusion_black_short_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="extrusion_black_short_2_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.012499712730764723 4.39567751087111e-07 0.06651773641725925"/>
+    <mass value="0.06588100115579627"/>
+    <inertia ixx="0.000102" ixy="0.0" ixz="-0.0" iyy="0.000114" iyz="0.0" izz="2.1e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.307242 -0.297776 -0.210166"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/extrusion_black_short_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.307242 -0.297776 -0.210166"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/extrusion_black_short_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="extrusion_black_short_3_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.01250029061752031 4.515547899486272e-07 0.06651773641724204"/>
+    <mass value="0.06588100115579627"/>
+    <inertia ixx="0.000102" ixy="0.0" ixz="0.0" iyy="0.000114" iyz="0.0" izz="2.1e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.117758 0.439224 -0.210166"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/extrusion_black_short_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.117758 0.439224 -0.210166"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/extrusion_black_short_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="extrusion_black_short_4_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.012499709382479837 4.515547899486272e-07 0.06651773641724204"/>
+    <mass value="0.06588100115579627"/>
+    <inertia ixx="0.000102" ixy="0.0" ixz="0.0" iyy="0.000114" iyz="0.0" izz="2.1e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.107242 0.439224 -0.210166"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/extrusion_black_short_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.107242 0.439224 -0.210166"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/extrusion_black_short_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="extrusion_black_short_5_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="2.8925955491976296e-07 0.012500447612418114 0.06651773641724915"/>
+    <mass value="0.06588100115579627"/>
+    <inertia ixx="0.000114" ixy="-0.0" ixz="0.0" iyy="0.000102" iyz="0.0" izz="2.1e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.373758 0.146724 -0.210166"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/extrusion_black_short_5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.373758 0.146724 -0.210166"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/extrusion_black_short_5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="extrusion_black_short_6_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="3.006142397232736e-07 0.012500447612418114 0.06651773641724903"/>
+    <mass value="0.06588100115579627"/>
+    <inertia ixx="0.000114" ixy="-0.0" ixz="0.0" iyy="0.000102" iyz="0.0" izz="2.1e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.363242 0.146724 -0.210166"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/extrusion_black_short_6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.363242 0.146724 -0.210166"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/extrusion_black_short_6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_mount_1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="2.889433827757415e-07 -0.06353423112382717 0.06495408520949017"/>
+    <mass value="0.25492174243490734"/>
+    <inertia ixx="0.001046" ixy="0.0" ixz="0.0" iyy="0.000332" iyz="-0.0" izz="0.00072"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.309508 -0.21588 -0.210166"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/wheel_mount_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.309508 -0.21588 -0.210166"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/wheel_mount_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel__mount_2_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="2.8894338283125265e-07 -0.06353423112382717 0.06495408520949017"/>
+    <mass value="0.25492174243490734"/>
+    <inertia ixx="0.001046" ixy="0.0" ixz="0.0" iyy="0.000332" iyz="-0.0" izz="0.00072"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.298992 -0.21588 -0.210166"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/wheel__mount_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.298992 -0.21588 -0.210166"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/wheel__mount_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Battery_Pack_Case_V2_v2_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.0914002889433778 -0.19275505398905515 0.0284894256487197"/>
+    <mass value="9.69505712078"/>
+    <inertia ixx="0.162115" ixy="0.0" ixz="0.0" iyy="0.089856" iyz="0.00599" izz="0.232167"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.107758 -0.2316 -0.210166"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/Battery_Pack_Case_V2_v2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.107758 -0.2316 -0.210166"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/Battery_Pack_Case_V2_v2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="BatteryPack_v3_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.08930241199222999 0.152803607692684 0.050801325282175624"/>
+    <mass value="64.83223866570434"/>
+    <inertia ixx="0.738925" ixy="2.1e-05" ixz="6e-06" iyy="0.338095" iyz="1.1e-05" izz="0.965485"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.107758 0.10995 -0.216516"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/BatteryPack_v3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.107758 0.10995 -0.216516"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/BatteryPack_v3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Upper_Plate_v95_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.3124916983891226 -0.3581890784209573 0.003175236417252425"/>
+    <mass value="6.764577004973843"/>
+    <inertia ixx="0.303625" ixy="1.3e-05" ixz="-0.0" iyy="0.291704" iyz="-0.0" izz="0.595284"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.317758 -0.297776 -0.343201"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/Upper_Plate_v95_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.317758 -0.297776 -0.343201"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/Upper_Plate_v95_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="extrusion_long_1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.012500287269214483 4.3956773693176743e-07 0.5433856244172577"/>
+    <mass value="0.5381857913311637"/>
+    <inertia ixx="0.053006" ixy="0.0" ixz="-0.0" iyy="0.053105" iyz="0.0" izz="0.000171"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.267758 -0.297776 -0.349551"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/extrusion_long_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.267758 -0.297776 -0.349551"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/extrusion_long_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="extrusion_black_short_7_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.012500290617520296 4.3956774792297537e-07 0.06651773641726244"/>
+    <mass value="0.06588100115579627"/>
+    <inertia ixx="0.000102" ixy="-0.0" ixz="-0.0" iyy="0.000114" iyz="0.0" izz="2.1e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.092758 -0.297776 -0.349551"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/extrusion_black_short_7_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.092758 -0.297776 -0.349551"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/extrusion_black_short_7_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="extrusion_long_2_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.012499709382458313 4.5155477612635053e-07 0.5433856244172577"/>
+    <mass value="0.5381857913311637"/>
+    <inertia ixx="0.053006" ixy="0.0" ixz="0.0" iyy="0.053105" iyz="0.0" izz="0.000171"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.257242 -0.297776 -0.349551"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/extrusion_long_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.257242 -0.297776 -0.349551"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/extrusion_long_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="extrusion_black_short_8_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.012499712730764792 4.395677479784865e-07 0.06651773641725928"/>
+    <mass value="0.06588100115579627"/>
+    <inertia ixx="0.000102" ixy="0.0" ixz="-0.0" iyy="0.000114" iyz="0.0" izz="2.1e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.082242 -0.297776 -0.349551"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/extrusion_black_short_8_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.082242 -0.297776 -0.349551"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/extrusion_black_short_8_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="extrusion_long_2_2">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.008839234425409598 0.008839069049067672 0.543385624417247"/>
+    <mass value="0.5381857913311637"/>
+    <inertia ixx="0.053055" ixy="-5e-05" ixz="-0.0" iyy="0.053055" iyz="0.0" izz="0.000171"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.139066 0.416722 -0.349551"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/extrusion_long_2_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.139066 0.416722 -0.349551"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/extrusion_long_2_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="extrusion_long_2_3">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.008034675831944976 0.009575781633933966 0.5433856244172472"/>
+    <mass value="0.5381857913311637"/>
+    <inertia ixx="0.053064" ixy="4.9e-05" ixz="-0.0" iyy="0.053047" iyz="0.0" izz="0.000171"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.149582 0.416722 -0.349551"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/extrusion_long_2_3.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.149582 0.416722 -0.349551"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/extrusion_long_2_3.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="bms_new_v1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.06593745658719556 0.05128274574581754 0.00851135719921614"/>
+    <mass value="1.352199393169288"/>
+    <inertia ixx="0.001552" ixy="3.5e-05" ixz="-4e-06" iyy="0.002419" iyz="4e-06" izz="0.003842"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.188742 0.35036 -0.349551"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/bms_new_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.188742 0.35036 -0.349551"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/bms_new_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="gusset_1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.005439206460333024 4.860079763358005e-07 0.018139898305065738"/>
+    <mass value="0.10868033481871604"/>
+    <inertia ixx="3.2e-05" ixy="-0.0" ixz="1.3e-05" iyy="5.3e-05" iyz="-0.0" izz="3.2e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.320803 0.119073 -0.349551"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/gusset_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.320803 0.119073 -0.349551"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/gusset_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="25-2525-BLACK-FB-3ft_v4__1__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="1.5023450727902343e-07 -1.1895837361233785e-05 0.5434462364172503"/>
+    <mass value="0.3045698028403489"/>
+    <inertia ixx="0.030003" ixy="0.0" ixz="0.0" iyy="0.030003" iyz="0.0" izz="3.9e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.346366 0.117016 -0.349551"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/25-2525-BLACK-FB-3ft_v4__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.346366 0.117016 -0.349551"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/25-2525-BLACK-FB-3ft_v4__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="gusset_2_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.005439628573577493 4.860079763358005e-07 0.018139898305065794"/>
+    <mass value="0.10868033481871604"/>
+    <inertia ixx="3.2e-05" ixy="0.0" ixz="-1.3e-05" iyy="5.3e-05" iyz="-0.0" izz="3.2e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.310288 0.119073 -0.349551"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/gusset_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.310288 0.119073 -0.349551"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/gusset_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="25-2525-BLACK-FB-3ft_v4_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="4.27652247780852e-07 -1.1895837358930073e-05 0.5434462364172503"/>
+    <mass value="0.3045698028403489"/>
+    <inertia ixx="0.030003" ixy="0.0" ixz="0.0" iyy="0.030003" iyz="0.0" izz="3.9e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.33585 0.117016 -0.349551"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/25-2525-BLACK-FB-3ft_v4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.33585 0.117016 -0.349551"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/25-2525-BLACK-FB-3ft_v4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="GAU-LP-3L-UVC-T8-V1_3ft_Light_v5__1__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.030434930745823596 1.8742240127933574e-07 0.44743182523617936"/>
+    <mass value="2.6048863345120696"/>
+    <inertia ixx="0.199966" ixy="-0.0" ixz="0.001051" iyy="0.20026" iyz="0.0" izz="0.002331"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.34835 0.121336 -0.349551"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/GAU-LP-3L-UVC-T8-V1_3ft_Light_v5__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.34835 0.121336 -0.349551"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/GAU-LP-3L-UVC-T8-V1_3ft_Light_v5__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="GAU-LP-3L-UVC-T8-V1_3ft_Light_v5_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.030434352859068814 1.8742239775437763e-07 0.4474318252361786"/>
+    <mass value="2.6048863345120696"/>
+    <inertia ixx="0.199966" ixy="-0.0" ixz="-0.001051" iyy="0.20026" iyz="-0.0" izz="0.002331"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.358866 0.121336 -0.349551"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/GAU-LP-3L-UVC-T8-V1_3ft_Light_v5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.358866 0.121336 -0.349551"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/GAU-LP-3L-UVC-T8-V1_3ft_Light_v5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Upper_Plate_v95__1__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.1443323016108768 0.3563089215790164 0.0031750124172527094"/>
+    <mass value="6.764577004973843"/>
+    <inertia ixx="0.303625" ixy="1.3e-05" ixz="-0.0" iyy="0.291704" iyz="-0.0" izz="0.595284"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.139066 0.416722 -1.436322"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/Upper_Plate_v95__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.139066 0.416722 -1.436322"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/Upper_Plate_v95__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Phoenix_Inverter_C_24-1200_v2_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.15070228023888393 0.03877415577496701 0.006196164646591562"/>
+    <mass value="0.13265406725305098"/>
+    <inertia ixx="0.000204" ixy="-7e-06" ixz="1.8e-05" iyy="0.003167" iyz="1.6e-05" izz="0.003288"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.160258 0.002724 -0.349551"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/Phoenix_Inverter_C_24-1200_v2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.160258 0.002724 -0.349551"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/Phoenix_Inverter_C_24-1200_v2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="25-2550-BLACK-FB_Medium_v3_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.008839168727961283 0.008838581238353571 0.3557182004172419"/>
+    <mass value="0.3523143586990743"/>
+    <inertia ixx="0.014916" ixy="3.3e-05" ixz="0.0" iyy="0.014916" iyz="0.0" izz="0.000112"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.184937 0.381366 -1.442672"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/25-2550-BLACK-FB_Medium_v3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.184937 0.381366 -1.442672"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/25-2550-BLACK-FB_Medium_v3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="25-2550-BLACK-FB_Medium_v3__1__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.008838755090834594 0.00883857276223693 0.3557182004172419"/>
+    <mass value="0.3523143586990743"/>
+    <inertia ixx="0.014916" ixy="-3.3e-05" ixz="-0.0" iyy="0.014916" iyz="0.0" izz="0.000112"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.174422 0.381366 -1.442672"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/25-2550-BLACK-FB_Medium_v3__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.174422 0.381366 -1.442672"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/25-2550-BLACK-FB_Medium_v3__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="25-2550-BLACK-FB_Medium_v3__2__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.012500287269214483 4.395677147828181e-07 0.3557182004172563"/>
+    <mass value="0.3523143586990743"/>
+    <inertia ixx="0.014884" ixy="0.0" ixz="0.0" iyy="0.014949" iyz="0.0" izz="0.000112"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.317758 -0.297776 -1.442672"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/25-2550-BLACK-FB_Medium_v3__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.317758 -0.297776 -1.442672"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/25-2550-BLACK-FB_Medium_v3__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="25-2550-BLACK-FB_Medium_v3__3__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.012499712730785373 4.3956771494935154e-07 0.3557182004172559"/>
+    <mass value="0.3523143586990743"/>
+    <inertia ixx="0.014884" ixy="0.0" ixz="0.0" iyy="0.014949" iyz="0.0" izz="0.000112"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.307242 -0.297776 -1.442672"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/25-2550-BLACK-FB_Medium_v3__3__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.307242 -0.297776 -1.442672"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/25-2550-BLACK-FB_Medium_v3__3__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="gusset_3_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.005439628573576716 4.86007991476467e-07 0.018139674305065023"/>
+    <mass value="0.10868033481871604"/>
+    <inertia ixx="3.2e-05" ixy="-0.0" ixz="-1.3e-05" iyy="5.3e-05" iyz="0.0" izz="3.2e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.310288 0.119073 -1.442672"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/gusset_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.310288 0.119073 -1.442672"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/gusset_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="25-2525-BLACK-FB_v5_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="4.2765224850249695e-07 -1.1895837380676566e-05 0.35563851241725053"/>
+    <mass value="0.19931464731994966"/>
+    <inertia ixx="0.008416" ixy="0.0" ixz="-0.0" iyy="0.008416" iyz="0.0" izz="2.6e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.33585 0.117016 -1.442672"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/25-2525-BLACK-FB_v5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.33585 0.117016 -1.442672"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/25-2525-BLACK-FB_v5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="GAU-LP-3L-UVC-T8-V1_2ft_v5_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.03043493074582443 1.8742237754831859e-07 0.34452233580782665"/>
+    <mass value="2.005762477574293"/>
+    <inertia ixx="0.091611" ixy="-0.0" ixz="0.000623" iyy="0.091837" iyz="0.0" izz="0.001795"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.34835 0.121336 -1.442672"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/GAU-LP-3L-UVC-T8-V1_2ft_v5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.34835 0.121336 -1.442672"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/GAU-LP-3L-UVC-T8-V1_2ft_v5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="gusset_4_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.005439206460333579 4.860079913515669e-07 0.018139674305065023"/>
+    <mass value="0.10868033481871604"/>
+    <inertia ixx="3.2e-05" ixy="0.0" ixz="1.3e-05" iyy="5.3e-05" iyz="0.0" izz="3.2e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.320803 0.119073 -1.442672"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/gusset_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.320803 0.119073 -1.442672"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/gusset_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="25-2525-BLACK-FB_v5__1__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="1.5023450805617955e-07 -1.1895837383174568e-05 0.35563851241725053"/>
+    <mass value="0.19931464731994966"/>
+    <inertia ixx="0.008416" ixy="0.0" ixz="0.0" iyy="0.008416" iyz="0.0" izz="2.6e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.346366 0.117016 -1.442672"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/25-2525-BLACK-FB_v5__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.346366 0.117016 -1.442672"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/25-2525-BLACK-FB_v5__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="GAU-LP-3L-UVC-T8-V1_2ft_v5__1__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.03043435285906787 1.8742237396784933e-07 0.3445223358078262"/>
+    <mass value="2.005762477574293"/>
+    <inertia ixx="0.091611" ixy="-0.0" ixz="-0.000623" iyy="0.091837" iyz="-0.0" izz="0.001795"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.358866 0.121336 -1.442672"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/GAU-LP-3L-UVC-T8-V1_2ft_v5__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.358866 0.121336 -1.442672"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/GAU-LP-3L-UVC-T8-V1_2ft_v5__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Upper_Plate_v95__2__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.31250830161087684 -0.35818907842100045 0.0031753884172518454"/>
+    <mass value="6.764577004973843"/>
+    <inertia ixx="0.303625" ixy="1.3e-05" ixz="-0.0" iyy="0.291704" iyz="-0.0" izz="0.595284"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.307242 -0.297776 -2.154108"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/Upper_Plate_v95__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.307242 -0.297776 -2.154108"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/Upper_Plate_v95__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="JetsonTX2_v1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.020866201066881584 -0.0396268791344454 0.004922087293047994"/>
+    <mass value="0.19118650365431633"/>
+    <inertia ixx="0.000122" ixy="-0.0" ixz="0.0" iyy="4.3e-05" iyz="-0.0" izz="0.000161"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.199258 0.18561 -2.160458"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/JetsonTX2_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.199258 0.18561 -2.160458"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/JetsonTX2_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Controller_new__v1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.06329030816529652 0.04082154489932688 0.010550886969626694"/>
+    <mass value="1.225892203350124"/>
+    <inertia ixx="0.002383" ixy="8e-06" ixz="-2e-06" iyy="0.002246" iyz="-8e-06" izz="0.004374"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.232258 0.317724 -0.349551"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/Controller_new__v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.232258 0.317724 -0.349551"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/Controller_new__v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Camera_RealSense_D435_v1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-1.0790708581388982e-05 0.0009790191908293222 0.012138514204051987"/>
+    <mass value="0.10791100846631752"/>
+    <inertia ixx="1e-05" ixy="0.0" ixz="0.0" iyy="7.1e-05" iyz="0.0" izz="7.2e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.005258 -0.298276 -2.160458"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/Camera_RealSense_D435_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.005258 -0.298276 -2.160458"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/Camera_RealSense_D435_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="LIDAR_M1M1_v2_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.027509557448153366 0.052459646823562855 0.020053015341177094"/>
+    <mass value="0.5328492934083536"/>
+    <inertia ixx="0.000551" ixy="4e-06" ixz="-4e-06" iyy="0.000246" iyz="4.7e-05" izz="0.000575"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.021242 0.421724 -1.442672"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/LIDAR_M1M1_v2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.021242 0.421724 -1.442672"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/LIDAR_M1M1_v2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="LIDAR_M1M1_v2__1__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.027510135334910063 -0.052458755701077636 0.02005301534119086"/>
+    <mass value="0.5328492934083536"/>
+    <inertia ixx="0.000551" ixy="4e-06" ixz="4e-06" iyy="0.000246" iyz="-4.7e-05" izz="0.000575"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.031758 -0.280276 -1.442672"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/LIDAR_M1M1_v2__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.031758 -0.280276 -1.442672"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/LIDAR_M1M1_v2__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Battery_Charger_Mount_v1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.022464661694364167 0.003175445561267365 -2.6358273885751515e-07"/>
+    <mass value="0.15833473906905376"/>
+    <inertia ixx="6.8e-05" ixy="0.0" ixz="0.0" iyy="9.4e-05" iyz="0.0" izz="2.7e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.069742 -0.310276 -0.416069"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/Battery_Charger_Mount_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.069742 -0.310276 -0.416069"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/Battery_Charger_Mount_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Charging-connector-extended-step3d_v1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.036960642076175665 0.02329591440865647 -0.027888764193663873"/>
+    <mass value="0.9754886409939707"/>
+    <inertia ixx="0.000289" ixy="0.0" ixz="0.0" iyy="0.000827" iyz="2e-06" izz="0.000803"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.032742 -0.316626 -0.444069"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/Charging-connector-extended-step3d_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.032742 -0.316626 -0.444069"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/Charging-connector-extended-step3d_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Battery_Charger_Mount_v1__1__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.014534760418880285 -0.003174554438732602 -0.028000263582738938"/>
+    <mass value="0.15833473906905376"/>
+    <inertia ixx="6.8e-05" ixy="0.0" ixz="-0.0" iyy="9.4e-05" iyz="0.0" izz="2.7e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.041258 -0.316626 -0.444069"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/Battery_Charger_Mount_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.041258 -0.316626 -0.444069"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/Battery_Charger_Mount_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="jetson_nano_v1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.03213592962873826 -0.043746506733407214 0.009153860119286428"/>
+    <mass value="0.3756486926831626"/>
+    <inertia ixx="0.00024" ixy="1e-06" ixz="-1.9e-05" iyy="0.000212" iyz="-3e-06" izz="0.000409"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.269742 0.167724 -1.442672"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/jetson_nano_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.269742 0.167724 -1.442672"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/jetson_nano_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="butler_motor_v1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.03736723682625487 0.00017527527841065815 -0.05712857611115485"/>
+    <mass value="11.11827564139619"/>
+    <inertia ixx="0.013324" ixy="-3.5e-05" ixz="3.4e-05" iyy="0.040366" iyz="8e-06" izz="0.04016"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.304742 -0.152574 -0.312809"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/butler_motor_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.304742 -0.152574 -0.312809"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/butler_motor_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="butler_tire_v1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.0026463623614774723 9.492655959170149e-05 0.0001133060580915668"/>
+    <mass value="0.42973723468390157"/>
+    <inertia ixx="0.001747" ixy="0.0" ixz="0.0" iyy="0.000923" iyz="-0.0" izz="0.000923"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.355742 -0.152861 -0.255684"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/butler_tire_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.355742 -0.152861 -0.255684"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/butler_tire_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="butler_motor_v1__1__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.03736781471301026 -0.00017618865790691718 -0.05712857611115496"/>
+    <mass value="11.11827564139619"/>
+    <inertia ixx="0.013324" ixy="-3.5e-05" ixz="-3.4e-05" iyy="0.040366" iyz="-8e-06" izz="0.04016"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.315258 -0.152574 -0.312809"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/butler_motor_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.315258 -0.152574 -0.312809"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/butler_motor_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="butler_tire_v1__1__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.0026469402482329762 -9.483993908801502e-05 0.00011330605809189986"/>
+    <mass value="0.42973723468390157"/>
+    <inertia ixx="0.001747" ixy="0.0" ixz="-0.0" iyy="0.000923" iyz="0.0" izz="0.000923"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.366258 -0.152286 -0.255684"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/butler_tire_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.366258 -0.152286 -0.255684"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/butler_tire_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="caster_base_v1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.03333758559873211 -0.0460372814248769 -0.00715152365802868"/>
+    <mass value="0.8083574118190648"/>
+    <inertia ixx="0.000633" ixy="-0.0" ixz="0.0" iyy="0.000521" iyz="-0.0" izz="0.001085"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.025772 0.262358 -0.343201"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/caster_base_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.025772 0.262358 -0.343201"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/caster_base_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="caster_wheel_v1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="4.1440126784600406e-07 -0.028770499244561654 -0.05704254380277546"/>
+    <mass value="5.093579795561285"/>
+    <inertia ixx="0.015758" ixy="0.0" ixz="0.0" iyy="0.011614" iyz="-0.002665" izz="0.008251"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.007566 0.308395 -0.319071"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/caster_wheel_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.007566 0.308395 -0.319071"/>
+    <geometry>
+      <mesh filename="package://butler_description/meshes/caster_wheel_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Rigid1" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.317758 0.297776 0.210166"/>
+  <parent link="base_link"/>
+  <child link="extrusion_black_short_1_1"/>
+</joint>
+
+<joint name="Rigid2" type="fixed">
+  <origin rpy="0 0 0" xyz="0.307242 0.297776 0.210166"/>
+  <parent link="base_link"/>
+  <child link="extrusion_black_short_2_1"/>
+</joint>
+
+<joint name="Rigid3" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.117758 -0.439224 0.210166"/>
+  <parent link="base_link"/>
+  <child link="extrusion_black_short_3_1"/>
+</joint>
+
+<joint name="Rigid4" type="fixed">
+  <origin rpy="0 0 0" xyz="0.107242 -0.439224 0.210166"/>
+  <parent link="base_link"/>
+  <child link="extrusion_black_short_4_1"/>
+</joint>
+
+<joint name="Rigid5" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.373758 -0.146724 0.210166"/>
+  <parent link="base_link"/>
+  <child link="extrusion_black_short_5_1"/>
+</joint>
+
+<joint name="Rigid6" type="fixed">
+  <origin rpy="0 0 0" xyz="0.363242 -0.146724 0.210166"/>
+  <parent link="base_link"/>
+  <child link="extrusion_black_short_6_1"/>
+</joint>
+
+<joint name="Rigid7" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.309508 0.21588 0.210166"/>
+  <parent link="base_link"/>
+  <child link="wheel_mount_1_1"/>
+</joint>
+
+<joint name="Rigid9" type="fixed">
+  <origin rpy="0 0 0" xyz="0.298992 0.21588 0.210166"/>
+  <parent link="base_link"/>
+  <child link="wheel__mount_2_1"/>
+</joint>
+
+<joint name="Rigid11" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.107758 0.2316 0.210166"/>
+  <parent link="base_link"/>
+  <child link="Battery_Pack_Case_V2_v2_1"/>
+</joint>
+
+<joint name="Rigid12" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 -0.34155 0.00635"/>
+  <parent link="Battery_Pack_Case_V2_v2_1"/>
+  <child link="BatteryPack_v3_1"/>
+</joint>
+
+<joint name="Rigid13" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 0.0 0.133035"/>
+  <parent link="extrusion_black_short_1_1"/>
+  <child link="Upper_Plate_v95_1"/>
+</joint>
+
+<joint name="Rigid15" type="fixed">
+  <origin rpy="0 0 0" xyz="0.05 0.0 0.00635"/>
+  <parent link="Upper_Plate_v95_1"/>
+  <child link="extrusion_long_1_1"/>
+</joint>
+
+<joint name="Rigid16" type="fixed">
+  <origin rpy="0 0 0" xyz="0.225 0.0 0.00635"/>
+  <parent link="Upper_Plate_v95_1"/>
+  <child link="extrusion_black_short_7_1"/>
+</joint>
+
+<joint name="Rigid17" type="fixed">
+  <origin rpy="0 0 0" xyz="0.575 0.0 0.00635"/>
+  <parent link="Upper_Plate_v95_1"/>
+  <child link="extrusion_long_2_1"/>
+</joint>
+
+<joint name="Rigid18" type="fixed">
+  <origin rpy="0 0 0" xyz="0.4 0.0 0.00635"/>
+  <parent link="Upper_Plate_v95_1"/>
+  <child link="extrusion_black_short_8_1"/>
+</joint>
+
+<joint name="Rigid19" type="fixed">
+  <origin rpy="0 0 0" xyz="0.456824 -0.714498 0.00635"/>
+  <parent link="Upper_Plate_v95_1"/>
+  <child link="extrusion_long_2_2"/>
+</joint>
+
+<joint name="Rigid20" type="fixed">
+  <origin rpy="0 0 0" xyz="0.168176 -0.714498 0.00635"/>
+  <parent link="Upper_Plate_v95_1"/>
+  <child link="extrusion_long_2_3"/>
+</joint>
+
+<joint name="Rigid21" type="fixed">
+  <origin rpy="0 0 0" xyz="0.5065 -0.648136 0.00635"/>
+  <parent link="Upper_Plate_v95_1"/>
+  <child link="bms_new_v1_1"/>
+</joint>
+
+<joint name="Rigid22" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.003045 -0.416849 0.00635"/>
+  <parent link="Upper_Plate_v95_1"/>
+  <child link="gusset_1_1"/>
+</joint>
+
+<joint name="Rigid23" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.028608 -0.414792 0.00635"/>
+  <parent link="Upper_Plate_v95_1"/>
+  <child link="25-2525-BLACK-FB-3ft_v4__1__1"/>
+</joint>
+
+<joint name="Rigid24" type="fixed">
+  <origin rpy="0 0 0" xyz="0.628046 -0.416849 0.00635"/>
+  <parent link="Upper_Plate_v95_1"/>
+  <child link="gusset_2_1"/>
+</joint>
+
+<joint name="Rigid25" type="fixed">
+  <origin rpy="0 0 0" xyz="0.653608 -0.414792 0.00635"/>
+  <parent link="Upper_Plate_v95_1"/>
+  <child link="25-2525-BLACK-FB-3ft_v4_1"/>
+</joint>
+
+<joint name="Rigid26" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0125 -0.00432 0.0"/>
+  <parent link="25-2525-BLACK-FB-3ft_v4_1"/>
+  <child link="GAU-LP-3L-UVC-T8-V1_3ft_Light_v5__1__1"/>
+</joint>
+
+<joint name="Rigid27" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.0125 -0.00432 0.0"/>
+  <parent link="25-2525-BLACK-FB-3ft_v4__1__1"/>
+  <child link="GAU-LP-3L-UVC-T8-V1_3ft_Light_v5_1"/>
+</joint>
+
+<joint name="Rigid28" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 0.0 1.086771"/>
+  <parent link="extrusion_long_2_2"/>
+  <child link="Upper_Plate_v95__1__1"/>
+</joint>
+
+<joint name="Rigid29" type="fixed">
+  <origin rpy="0 0 0" xyz="0.1575 -0.3005 0.00635"/>
+  <parent link="Upper_Plate_v95_1"/>
+  <child link="Phoenix_Inverter_C_24-1200_v2_1"/>
+</joint>
+
+<joint name="Rigid30" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.324003 0.035356 0.00635"/>
+  <parent link="Upper_Plate_v95__1__1"/>
+  <child link="25-2550-BLACK-FB_Medium_v3_1"/>
+</joint>
+
+<joint name="Rigid31" type="fixed">
+  <origin rpy="0 0 0" xyz="0.035356 0.035356 0.00635"/>
+  <parent link="Upper_Plate_v95__1__1"/>
+  <child link="25-2550-BLACK-FB_Medium_v3__1__1"/>
+</joint>
+
+<joint name="Rigid32" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.456824 0.714498 0.00635"/>
+  <parent link="Upper_Plate_v95__1__1"/>
+  <child link="25-2550-BLACK-FB_Medium_v3__2__1"/>
+</joint>
+
+<joint name="Rigid33" type="fixed">
+  <origin rpy="0 0 0" xyz="0.168176 0.714498 0.00635"/>
+  <parent link="Upper_Plate_v95__1__1"/>
+  <child link="25-2550-BLACK-FB_Medium_v3__3__1"/>
+</joint>
+
+<joint name="Rigid34" type="fixed">
+  <origin rpy="0 0 0" xyz="0.171222 0.297649 0.00635"/>
+  <parent link="Upper_Plate_v95__1__1"/>
+  <child link="gusset_3_1"/>
+</joint>
+
+<joint name="Rigid35" type="fixed">
+  <origin rpy="0 0 0" xyz="0.196784 0.299706 0.00635"/>
+  <parent link="Upper_Plate_v95__1__1"/>
+  <child link="25-2525-BLACK-FB_v5_1"/>
+</joint>
+
+<joint name="Rigid36" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0125 -0.00432 0.0"/>
+  <parent link="25-2525-BLACK-FB_v5_1"/>
+  <child link="GAU-LP-3L-UVC-T8-V1_2ft_v5_1"/>
+</joint>
+
+<joint name="Rigid37" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.459869 0.297649 0.00635"/>
+  <parent link="Upper_Plate_v95__1__1"/>
+  <child link="gusset_4_1"/>
+</joint>
+
+<joint name="Rigid38" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.485432 0.299706 0.00635"/>
+  <parent link="Upper_Plate_v95__1__1"/>
+  <child link="25-2525-BLACK-FB_v5__1__1"/>
+</joint>
+
+<joint name="Rigid39" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.0125 -0.00432 0.0"/>
+  <parent link="25-2525-BLACK-FB_v5__1__1"/>
+  <child link="GAU-LP-3L-UVC-T8-V1_2ft_v5__1__1"/>
+</joint>
+
+<joint name="Rigid40" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 0.0 0.711436"/>
+  <parent link="25-2550-BLACK-FB_Medium_v3__3__1"/>
+  <child link="Upper_Plate_v95__2__1"/>
+</joint>
+
+<joint name="Rigid41" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.5065 -0.483386 0.00635"/>
+  <parent link="Upper_Plate_v95__2__1"/>
+  <child link="JetsonTX2_v1_1"/>
+</joint>
+
+<joint name="Rigid42" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0855 -0.6155 0.00635"/>
+  <parent link="Upper_Plate_v95_1"/>
+  <child link="Controller_new__v1_1"/>
+</joint>
+
+<joint name="Rigid43" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.3125 0.0005 0.00635"/>
+  <parent link="Upper_Plate_v95__2__1"/>
+  <child link="Camera_RealSense_D435_v1_1"/>
+</joint>
+
+<joint name="Rigid44" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.117824 -0.005002 0.00635"/>
+  <parent link="Upper_Plate_v95__1__1"/>
+  <child link="LIDAR_M1M1_v2_1"/>
+</joint>
+
+<joint name="Rigid45" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.170824 0.696998 0.00635"/>
+  <parent link="Upper_Plate_v95__1__1"/>
+  <child link="LIDAR_M1M1_v2__1__1"/>
+</joint>
+
+<joint name="Rigid46" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.0125 0.0125 0.066518"/>
+  <parent link="extrusion_black_short_8_1"/>
+  <child link="Battery_Charger_Mount_v1_1"/>
+</joint>
+
+<joint name="Rigid48" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.037 0.00635 0.028"/>
+  <parent link="Battery_Charger_Mount_v1_1"/>
+  <child link="Charging-connector-extended-step3d_v1_1"/>
+</joint>
+
+<joint name="Rigid49" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.074 0.0 0.0"/>
+  <parent link="Charging-connector-extended-step3d_v1_1"/>
+  <child link="Battery_Charger_Mount_v1__1__1"/>
+</joint>
+
+<joint name="Rigid50" type="fixed">
+  <origin rpy="0 0 0" xyz="0.130676 0.248998 0.00635"/>
+  <parent link="Upper_Plate_v95__1__1"/>
+  <child link="jetson_nano_v1_1"/>
+</joint>
+
+<joint name="Rigid51" type="fixed">
+  <origin rpy="0 0 0" xyz="0.00575 -0.063306 0.102643"/>
+  <parent link="wheel__mount_2_1"/>
+  <child link="butler_motor_v1_1"/>
+</joint>
+
+<joint name="Rev52" type="continuous">
+  <origin rpy="0 0 0" xyz="0.051 0.000287 -0.057125"/>
+  <parent link="butler_motor_v1_1"/>
+  <child link="butler_tire_v1_1"/>
+  <axis xyz="1.0 0.0 -0.0"/>
+</joint>
+
+<joint name="Rigid53" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.00575 -0.063306 0.102643"/>
+  <parent link="wheel_mount_1_1"/>
+  <child link="butler_motor_v1__1__1"/>
+</joint>
+
+<joint name="Rev54" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.051 -0.000288 -0.057125"/>
+  <parent link="butler_motor_v1__1__1"/>
+  <child link="butler_tire_v1__1__1"/>
+  <axis xyz="-1.0 0.0 0.0"/>
+</joint>
+
+<joint name="Rigid55" type="fixed">
+  <origin rpy="0 0 0" xyz="0.34353 -0.560134 0.0"/>
+  <parent link="Upper_Plate_v95_1"/>
+  <child link="caster_base_v1_1"/>
+</joint>
+
+<joint name="Rev56" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.033338 -0.046037 -0.02413"/>
+  <parent link="caster_base_v1_1"/>
+  <child link="caster_wheel_v1_1"/>
+  <axis xyz="0.0 0.0 -1.0"/>
+</joint>
+
+</robot>
